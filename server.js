@@ -33,8 +33,10 @@ console.log(path.resolve('../dist/index.html'))
 app.get("*", (req, res) => {
   res.sendFile(path.resolve('../dist/index.html'));
 });
+
+const PORT = process.env.PORT || 3000;
  
 // listen to the server
-app.listen(1337, () => {
-  console.log(`Server is running at http://localhost:1337`);
+app.listen(PORT, () => {
+  console.log(`Server is running at ${PORT}`);
 });
